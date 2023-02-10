@@ -103,12 +103,12 @@
 // !!"0" = True
 //
 // let sample = "Hello Codeup";
-// sample.toUpperCase();
-// let newsample = sample.replace("Codeup", "class")
-// let index = newsample.indexOf("c")
+// // sample.toUpperCase();
+// // let newsample = sample.replace("Codeup", "class")
+// // let index = newsample.indexOf("c")
 // let sub = sample.substring(6)
 // console.log(sub);
-// answer 12
+//answer 12
 // index when "C" capped get you -1 and small Cap = 6
 //
 // let mermaid = 3;
@@ -117,13 +117,13 @@
 // let price = 3.00;
 // let totalCost = (mermaid + brotherBear + hercules) * price;
 // console.log (totalCost)
-//
-// let google = (400 * 10);
+
+// let google = (400 * 6);
 // let amazon = (380 * 4);
-// let facebook = (350 * 6);
+// let facebook = (350 * 10);
 // let total = (google + amazon + facebook)
-// console.log(facebook)
-//
+// console.log(`$${total}')
+
 // let classNotFull = true;
 // let classNotConflict = false;
 // let studentCanEnroll = classNotFull && classNotConflict;
@@ -134,18 +134,23 @@
 // }
 // console.log(studentCanEnroll)
 //
-// let productoffer =2;
-// let offerexpiration = true
-// let premiummembers = true
-// let offerapply = (productoffer >= 2 && premiummembers) && offerexpiration;
-// console.log(productoffer && offerexpiration && premiummembers && offerapply)
-//
-// let username = 'codeup';
+// let productOffer =3;
+// let offerExpiration = true
+// let premiumMembers = true
+// let offerapply = (productOffer >= 2 && premiumMembers) && offerExpiration;
+// console.log(productOffer && offerExpiration && premiumMembers && offerapply)
+
+
+// let username = 'Codeup';
 // let password = 'notastrongpassword';
-// let pwlength= password.length >= 5;
-// let pwusername = password.indexOf(username) === -1;
-// let username20chars = username.length <= 20;
-// let usernamewhitespace = !(/\s/.test(username) && /\s/.test(username));
-// let pwwhitespace = !(/\s/.test(password) && /\s$/.test(password));
-// let goodtogo = pwlength && pwusername && username20chars && usernamewhitespace && pwwhitespace;
-// console.log(`Is the username and password valid? ${goodtogo}`);
+// let pwLength= password.length >= 5;
+// let pwUserName = password.indexOf(username) === -1;
+// let userName20chars = username.length <= 20;
+// let userNameWhiteSpace = !(/\s/.test(username) && /\s/.test(username));
+// let pwWhiteSpace = !(/\s/.test(password) && /\s/.test(password));
+// let goodToGo = pwLength && pwUserName && userName20chars && userNameWhiteSpace && pwWhiteSpace;
+// console.log(`Is the username and password valid? ${goodToGo}`);
+
+// // let global = "Look, I'm Global!";
+// function sayHello() {}
+// console.log=function
