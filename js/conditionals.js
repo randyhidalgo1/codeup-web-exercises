@@ -24,8 +24,19 @@
 // } else if (analyzeColor === `red`) {
 //     alert("Strawberries are red");
 // } else {
-//     alert(analyzeColor"isn't my favorite color");
-//}
+//     alert(analyzeColor=("isn't my favorite color"));
+// }
+
+//With Return vs alert not working
+// let analyzeColor = (color);
+// if color === `blue`  {
+//     return `blue is the color of the sky`;
+// } else if color === `red` {
+//     return `Strawberries are red`;
+// } else {
+//     return 'this is not my favorite color ${color}`;
+// }
+// console.log(analyzeColor)
 
 // Don't change the next two lines!
 // These lines create two variables for you:
@@ -39,6 +50,13 @@
  * Pass the `randomColor` variable to your 'analyzeColor' function and console.log the results.
  * You should see a different message every time you refresh the page
  */
+// if (analyzeColor === `blue`)  {
+//     alert("blue is the color of the sky");
+// } else if (analyzeColor === `red`) {
+//     alert("Strawberries are red");
+// } else {
+//     alert(analyzeColor=("isn't my favorite color"));
+// }
 // let colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
 // let randomColor = colors[Math.floor(Math.random() * colors.length)]
 // console.log(randomColor)
@@ -54,8 +72,9 @@
  * function to show it to the user.
  */
 //
-// let colorAnalyze = prompt("What is your fav color?");
-// switch(colorAnalyze) {
+
+// const analyzeColor = prompt("Enter your color?");
+// switch(analyzeColor) {
 //     case "blue":
 //         alert("blue is the color of the sky");
 //         break;
@@ -63,7 +82,7 @@
 //         alert("Strawberries are red");
 //         break;
 //     default:
-//         alert("I don't know anything about " + colorAnalyze);
+//         alert("I don't know anything about " + analyzeColor);
 //         break;
 // }
 
@@ -161,11 +180,11 @@
 //     }
 //     let originalPrice = bill;
 //     let discountedPrice = (1 - discount) * originalPrice;
-//     alert(`Your original price was $${originalPrice}. Your discounted price is $${discountedPrice}.`);
-// }
+//         alert(`Your original price was $${originalPrice}. Your discounted price is $${discountedPrice}.`);
+//     }
 //     let bill = parseFloat(prompt("What is your total bill?"));
-//     if (isNaN(bill) || bill === "") {
-//     alert("Please enter a valid number.");
-// }   else {
+//         if (isNaN(bill) || bill === "") {
+//         alert("Please enter a valid number.");
+//     }   else {
 //     calculateTotal(bill);
 // }
