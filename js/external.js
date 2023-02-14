@@ -2,10 +2,10 @@
 // console.log("Hello from internal JavaScript".)
 // console.log("Hello from external JavaScript".)
 
-// alert("Welcome to my Website!");
-// console.log(alert)
-// let userInput = prompt('What is your favorite color?');
-// alert(userInput + (' is my favorite color too!'));
+alert("Welcome to my Website!");
+console.log(alert)
+let userInput = prompt('What is your favorite color?');
+alert(userInput + (' is my favorite color too!'));
 
 // let price = prompt(`How much did you pay for the movie?`)
 // let days = prompt('How many days did you rent the movie?');
