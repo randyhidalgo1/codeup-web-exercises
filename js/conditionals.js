@@ -135,28 +135,9 @@
  */
 // Generate a random number between 0 and 6
 // var luckyNumber = Math.floor(Math.random() * 6);
-
-/**
- * TODO:
- * Write some JavaScript that uses a `confirm` dialog to ask the user if they
- * would like to enter a number. If they click 'Ok', prompt the user for a
- * number, then use 3 separate alerts to tell the user:
- *
- * - whether the number is even or odd
- * - what the number plus 100 is
- * - if the number is negative or positive
- *
- * Do *NOT* display any of the above information
- * if the user enters a value that is not of the number data type.
- * Instead, use an alert to inform them of the incorrect input data type.
- *
- *
- * Can you refactor your code to use functions?
- * HINT: The way we prompt for a value could be improved
- */
 // function calculateTotal(bill) {
 //     let luckyNumber = Math.floor(Math.random() * 6);
-//     alert(`Your lucky number is ${luckyNumber}.`);
+//     confirm(`Your lucky number is ${luckyNumber}.`);
 //     let discount;
 //     switch (luckyNumber) {
 //         case 0:
@@ -180,12 +161,50 @@
 //     }
 //     let originalPrice = bill;
 //     let discountedPrice = (1 - discount) * originalPrice;
-//         alert(`Your original price was $${originalPrice}. Your discounted price is $${discountedPrice}.`);
-//     }
-//     let bill = parseFloat(prompt("What is your total bill?"));
-//         if (isNaN(bill) || bill === "") {
-//         alert("Please enter a valid number.");
-//     }   else {
+//     alert(`Your original price was $${originalPrice}. Your discounted price is $${discountedPrice}.`);
+// }
+// let bill = parseFloat(prompt("What is your total bill?"));
+// if (isNaN(bill) || bill === "") {
+//     alert("Please enter a valid number.");
+// }   else {
 //     calculateTotal(bill);
 // }
+/**
+ * TODO:
+ * Write some JavaScript that uses a `confirm` dialog to ask the user if they
+ * would like to enter a number. If they click 'Ok', prompt the user for a
+ * number, then use 3 separate alerts to tell the user:
+ *
+ * - whether the number is even or odd
+ * - what the number plus 100 is
+ * - if the number is negative or positive
+ *
+ * Do *NOT* display any of the above information
+ * if the user enters a value that is not of the number data type.
+ * Instead, use an alert to inform them of the incorrect input data type.
+ *
+ *
+ * Can you refactor your code to use functions?
+ * HINT: The way we prompt for a value could be improved
+ */
 
+// let response = confirm("Would you like to enter a number?");
+// if (response === true) {
+//     let num = prompt("Please enter a number:");
+//     if (!isNaN(num)) {
+//         num = parseFloat(num);
+//         if (num % 2 === 0) {
+//             alert("The number is even.");
+//         } else {
+//             alert("The number is odd.");
+//         }
+//         alert("The number plus 100 is: " + (num + 100));
+//         if (num >= 0) {
+//             alert("The number is positive.");
+//         } else {
+//             alert("The number is negative.");
+//         }
+//     } else {
+//         alert("Incorrect input data type. Please enter a number.");
+//     }
+// }
