@@ -103,23 +103,26 @@
 //  * prompt the user for the bill total and a percentage they would like to tip,
 //  * then display the dollar amount they should tip
 //  */
-// function calculateTip(billTotal, tipPercent) {
-//     return billTotal * tipPercent;
-// }
-// let billTotal = parseFloat(prompt('Your bill comes to:'));
-// let tipPercent = parseFloat(prompt('What percentage of Tip?:'));
-// let tipTotal = parseFloat(prompt(calculateTip(tipPercent * billTotal)));
-// alert('You should Tip that much $' + tipTotal.toFixed(2));
-// console.log(calculateTip() + tipTotal.toFixed(2));
 
-// function calculateTip(tipPercent, billTotal) {
-//     return billTotal * tipPercent;
+// function calculateTip(bill, tipPercentage) {
+//     let tipAmount = bill * tipPercentage;
+//     return tipAmount;
 // }
-// let Total = prompt (`hello`)
-// console.log(calculateTip(0.20, 20.00))
 //
-
-
+// let billTotal = parseFloat(prompt("Enter the total bill amount:"));
+//
+// if (isNaN(billTotal) || billTotal === "") {
+//     alert("Please enter a valid number.");
+// } else {
+//     let tipPercentage = parseFloat(prompt("Enter the tip percentage:")) / 100;
+//
+//     if (isNaN(tipPercentage) || tipPercentage === "") {
+//         alert("Please enter a valid number.");
+//     } else {
+//         let tipAmount = calculateTip(billTotal, tipPercentage);
+//         alert(`You should tip $${tipAmount.toFixed(2)}.`);
+//     }
+// }
 //  * TODO:
 //  * Create a function named applyDiscount. This function should accept a price
 //  * (before a discount is applied), and a discount percentage (a number between 0
