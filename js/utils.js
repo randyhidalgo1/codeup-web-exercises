@@ -9,6 +9,6 @@ if (typeof userNumber === "string" || isNaN(userNumber) !== false) {
 
 //Random Function
     function randomNumber(min, max) {
-    return Math.floor(Math.random() * (max - min+ 10 + 1) + min);
+    return Math.floor(Math.random() * (max - min + 1) + min);
     }
 }
