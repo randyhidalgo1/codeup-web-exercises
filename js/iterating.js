@@ -1,5 +1,16 @@
-(function(){
-    "use strict";
+let  fruits = [`bananas`, `apples`, `oranges`, `mangos`, `tomatoes`];
+let var1 = fruits[2]
+    console.log(var1)
+let numberOfFruits = fruits.length
+   console.log('The number of fruits => ', numberOfFruits);
+
+let fruitsString = fruits.toString();
+console.log('Using toString() on fruits => ', fruitsString);
+
+let fruitsAndNumbers = ["bananas", 2, "apples", 45];
+console.log(fruitsAndNumbers)
+
+//const returnString = (input) ={
 
     /**
      * TODO:
@@ -44,4 +55,3 @@
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
 
-})();
