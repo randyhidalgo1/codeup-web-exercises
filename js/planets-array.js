@@ -114,7 +114,7 @@
 // //or unshift
 // dayOfWeek.unshift(`Randy Day`);
 // let stringDays = 'Monday"|"Tuesday"| "Wednesday"| "Thursday"| "Friday"| "Saturday"| "Sunday";
-// let arrayDays = stringDays.split(|);
+// let arrayDays = stringDays.split('|');
 // console.log(arrayDays)
 
 
