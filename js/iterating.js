@@ -117,10 +117,27 @@ console.log(studentNames)
      *  > second([1, 2, 3, 4, 5]) // returns 2
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
-let  numbers = [`1`, `2`, `3`, `4`, `5`];
-let first = numbers[0]
-    console.log(first)
-let second = numbers[1]
-console.log(second)
-let last = numbers[4]
-console.log(last)
+//let   arr = [`1`, `2`, `3`, `4`, `5`];
+// let first = numbers[0]
+//     console.log(first)
+// let second = numbers[1]
+// console.log(second)
+// let last = numbers[4]
+// console.log(last)
+
+
+const arr = [1, 2, 3, 4, 5];
+function first(arr) {
+    return arr[0];
+}
+function second(arr) {
+    return arr[1];
+}
+
+function last(arr) {
+    return arr[4];
+}
+
+console.log(first(arr));
+console.log(second(arr));
+console.log(last(arr));
