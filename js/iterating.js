@@ -1,3 +1,4 @@
+//NOTES
 //let  fruits = [`bananas`, `apples`, `oranges`, `mangos`, `tomatoes`];
 // let var1 = fruits[2]
 //     console.log(var1)
@@ -80,8 +81,8 @@ console.log(names.length)
      * accessing each element's index.
      *
      */
-names.forEach(function(element,index,array){
-    console.log("The Element follows:", element);
+names.forEach(function(element,){
+    console.log(`Name`, element);
 });
     /**
      * TODO:
@@ -92,7 +93,9 @@ for(let i = 0; i <= names.length; i++ ) {
     let name = names[i];
     console.log(name)
 }
-
+// Another Example
+// for (let i = 0; i < names.length; i++)
+//     console.log(names[i])
     /**
      * TODO:
      * Refactor your above code to use a `forEach` loop
@@ -103,7 +106,9 @@ names.forEach((names,index,array)=> {
         studentNames.push(names);
     }
 });
-console.log(studentNames)
+
+
+
     /**
      * TODO:
      * Create the following three functions, each will accept an array and
@@ -135,7 +140,7 @@ function second(arr) {
 }
 
 function last(arr) {
-    return arr[4];
+    return arr[arr.length - 1];
 }
 
 console.log(first(arr));
