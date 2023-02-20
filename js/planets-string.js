@@ -26,9 +26,9 @@
      * list. You will need an opening AND closing <ul> tags around the entire
      * string, and <li> tags around each planet.
      */
-    // let breakPlanets =planetsArray.join(`br`)
-    //     console.log(breakPlanets)
-    // let planetList = '<ul></ul>${ planetsArray.join('</li><li>')} </li></ul>';
-    //
+    let breakPlanets =planetsArray.join(`br`)
+        console.log(breakPlanets)
+    let planetList = '<ul></ul>${ planetsArray.join(`</li><li>`} </li></li>';
+
 })();
 
