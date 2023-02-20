@@ -62,9 +62,10 @@ const person = {
         return totalAmount * 0.88;
     }
 }
-console.log(`Cameron your total bill is $${hebDiscount(0, 180)}.`);
-console.log(`Ryan your total bill is $${hebDiscount(1, 250)}.`);
-console.log(`George your total bill is $${hebDiscount(1, 320)}.`);
+    console.log(shoppers[0].name + " this your current bill $ " + shoppers[0].amount + " this your bill after discount " + `$${hebDiscount(0, 180)}.`)
+    console.log(shoppers[1].name + " this your current bill $ " + shoppers[1].amount + " this your amount after discount " + `$${hebDiscount(1, 250)}.`)
+    console.log(shoppers[2].name + " this your current bill $ " + shoppers[2].amount + " this your amount after discount " + `$${hebDiscount(1, 320)}.`)
+
 
 
     /** TODO:
