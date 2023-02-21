@@ -13,9 +13,9 @@
      */
 
 const person = {
-        firstName: "Rick",
+        firstName: "Rick ",
         lastName: "Sanchez",
-        sayHello: "Hello Rick Sanchez",
+        sayHello: "Hello from ",
     }
     console.log(person.firstName)
     console.log(person.lastName)
@@ -31,7 +31,7 @@ const person = {
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
 
-    console.log(person.sayHello)
+    console.log(person.sayHello + person.firstName + person.lastName)
 
 
     /** TODO:
@@ -135,12 +135,12 @@ const person = {
      *      ---
      *      ...
      */
-
-    console.log(books[0])
-    console.log(books[1])
-    console.log(books[2])
-    console.log(books[3])
-    console.log(books[4])
+    //console.log(shoppers[0].name + " this your current bill $ " + shoppers[0].amount + " this you
+    console.log(books[0].title + " Author: " + books[0].authorFirstName + " " + books[0] .authorLastName)
+    console.log(books[1].title + " Author: " + books[1].authorFirstName + " " + books[1] .authorLastName)
+    console.log(books[2].title + " Author: " + books[2].authorFirstName + " " + books[2] .authorLastName)
+    console.log(books[3].title + " Author: " + books[3].authorFirstName + " " + books[3] .authorLastName)
+    console.log(books[4].title + " Author: " + books[4].authorFirstName + " " + books[4] .authorLastName)
 
 
     /**
@@ -157,7 +157,7 @@ const person = {
         return {
             title: title,
             authorFirstName: authorFirstName,
-            authorLastName: authorLastName
+            authorLastName: authorLastName,
         };
     }
     function showBookInfo(book) {
