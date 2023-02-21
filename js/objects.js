@@ -12,7 +12,7 @@
      *  > console.log(person.lastName) // "Sanchez"
      */
 
-const person = {
+    const person = {
         firstName: "Rick ",
         lastName: "Sanchez",
         sayHello: "Hello from ",
@@ -55,16 +55,16 @@ const person = {
     ];
 
     function hebDiscount(discount, totalAmount) {
-    if (discount === 0) {
-        return totalAmount;
-    } else if (discount === 1) {
-        return totalAmount * 0.88;
+        if (discount === 0) {
+            return totalAmount;
+        } else if (discount === 1) {
+            return totalAmount * 0.88;
+        }
     }
-}
+
     console.log(shoppers[0].name + " this your current bill $ " + shoppers[0].amount + " this your bill after discount " + `$${hebDiscount(0, 180)}.`)
     console.log(shoppers[1].name + " this your current bill $ " + shoppers[1].amount + " this your amount after discount " + `$${hebDiscount(1, 250)}.`)
     console.log(shoppers[2].name + " this your current bill $ " + shoppers[2].amount + " this your amount after discount " + `$${hebDiscount(1, 320)}.`)
-
 
 
     /** TODO:
@@ -80,32 +80,32 @@ const person = {
      * > console.log(books[0].author.lastName) // "Adams"
      */
     const books = [
-    {
-        title: "Salmon of Doubt",
-        authorFirstName: "Douglas",
-        authorLastName: "Adams"
-    },
-    {
-        title: "Book of  lies",
-        authorFirstName: "Salmon",
-        authorLastName: "Rushdie"
-    },
-    {
-        title: "Puzzle Palace",
-        authorFirstName: "William",
-        authorLastName: "Jones"
-    },
-    {
-        title: "Perfect Strike",
-        authorFirstName: "James",
-        authorLastName: "Conner"
-    },
-    {
-        title: "Beyond the skies",
-        authorFirstName: "Michael",
-        authorLastName: "Jackson"
-    }
-];
+        {
+            title: "Salmon of Doubt",
+            authorFirstName: "Douglas",
+            authorLastName: "Adams"
+        },
+        {
+            title: "Book of  lies",
+            authorFirstName: "Salmon",
+            authorLastName: "Rushdie"
+        },
+        {
+            title: "Puzzle Palace",
+            authorFirstName: "William",
+            authorLastName: "Jones"
+        },
+        {
+            title: "Perfect Strike",
+            authorFirstName: "James",
+            authorLastName: "Conner"
+        },
+        {
+            title: "Beyond the skies",
+            authorFirstName: "Michael",
+            authorLastName: "Jackson"
+        }
+    ];
 
     console.log(books[0].title) // "The Salmon of Doubt"
     console.log(books[0].authorFirstName) // "Douglas"
@@ -135,12 +135,12 @@ const person = {
      *      ---
      *      ...
      */
-    //console.log(shoppers[0].name + " this your current bill $ " + shoppers[0].amount + " this you
-    console.log(books[0].title + " Author: " + books[0].authorFirstName + " " + books[0] .authorLastName)
-    console.log(books[1].title + " Author: " + books[1].authorFirstName + " " + books[1] .authorLastName)
-    console.log(books[2].title + " Author: " + books[2].authorFirstName + " " + books[2] .authorLastName)
-    console.log(books[3].title + " Author: " + books[3].authorFirstName + " " + books[3] .authorLastName)
-    console.log(books[4].title + " Author: " + books[4].authorFirstName + " " + books[4] .authorLastName)
+
+    console.log("Title: " + books[0].title + " Author: " + books[0].authorFirstName + " " + books[0].authorLastName)
+    console.log("Title: " + books[1].title + " Author: " + books[1].authorFirstName + " " + books[1].authorLastName)
+    console.log("Title: " + books[2].title + " Author: " + books[2].authorFirstName + " " + books[2].authorLastName)
+    console.log("Title: " + books[3].title + " Author: " + books[3].authorFirstName + " " + books[3].authorLastName)
+    console.log("Title: " + books[4].title + " Author: " + books[4].authorFirstName + " " + books[4].authorLastName)
 
 
     /**
@@ -153,20 +153,26 @@ const person = {
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
-   function createBook(title, authorFirstName, authorLastName) {
-        return {
-            title: title,
-            authorFirstName: authorFirstName,
-            authorLastName: authorLastName,
+    function createBook(title, authorName) {
+        const [authorFirstName, authorLastName] = authorName.split(' ', 2)
+        const book = {
+            title,
+            author: {
+                firstName: authorFirstName,
+                lastName: authorLastName,
+            },
         };
+        return book;
     }
-    function showBookInfo(book) {
-        console.log(book.title + " by " + book.authorFirstName + " " + book.authorLastName);
-    }
-    for (let i = 0; i < books.length; i++) {
-        showBookInfo(books[i]);
-    }
+            console.log(createBook("Sky is the limit",'George Donner'));
 
+    function showBookInfo(bookObject) {
+            return (bookObject.title + " by " + bookObject.authorFirstName + " " + bookObject.authorLastName);
+        }
+
+        for (let i = 0; i <books.length; i++) {
+            console.log(showBookInfo(books[i]));
+        }
 })();
 
 
