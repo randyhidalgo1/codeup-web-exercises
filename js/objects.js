@@ -21,7 +21,6 @@ const person = {
     console.log(person.lastName)
 
 
-
     /**
      * TODO:
      * Add a sayHello method to the person object that returns a greeting using
@@ -48,7 +47,7 @@ const person = {
      * represents one shopper. Use a foreach loop to iterate through the array,
      * and console.log the relevant messages for each person
      */
-
+//
     let shoppers = [
         {name: 'Cameron', amount: 180},
         {name: 'Ryan', amount: 250},
@@ -143,6 +142,7 @@ const person = {
     console.log(books[3])
     console.log(books[4])
 
+
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
@@ -168,10 +168,6 @@ const person = {
     }
 
 })();
-
-
-
-
 
 
 //NOTES EXAMPLE
@@ -221,3 +217,51 @@ const person = {
 // const myString ="randyhidalgo";
 // for (const letter of myString) console.log(letter);
 //
+
+//NOTE METHOD
+
+// const fighter1 = {
+//     name: "Arata",
+//     hitPoints: 18,
+//     maxDamage: 8,
+//     attack: function (enemy) {
+//         console.log(`${enemy.name} has ${enemy.hitPoints}`);
+//         console.log(this.name + "attacks!");
+//         const damage = Math.ceil(Math.random() * this.maxDamage);
+//         console.log(`${this.name} does ${damage} points of damage!`);
+//         console.log(`${enemy.name} has ${enemy.hitPoints} hit points left!`);
+//     }
+// }
+//
+//
+// const fighter2 = {
+//     name: "Bigfoot",
+//     hitPoints: 17,
+//     maxDamage: 10,
+//     attack: function () {
+//         console.log(this.name + "attacks!");
+//     }
+// }
+//
+// const monster = {
+//     name: "Goblin",
+//     hitPoints: 8,
+//     maxDamage: 6,
+// }
+//
+// const gameLogic = {
+//     attack: function (attacker, defender) {
+//         console.log(`${defender.name}has ${defender.hitPoints} hit points.`)
+//         const hpBeforeAttack = defender.hitPoints;
+//         const damage = Math.ceil(Math.random() * attacker.maxDamage);
+//         defender.hitPoints -= damage;
+//     }
+// }
+//
+// const view = {
+//     displayAttacksResults: function(attackerName, defenderName, hpBeforeAttack, hpAfterAttack, damage){
+//     console.log(`${defenderName} and ${hpBeforeAttack} hit points`);
+//     console.log(`${attackerName} attacks`);
+//     console.log(`${attackerName} does ${damage} hit points`);
+//     }
+// }
