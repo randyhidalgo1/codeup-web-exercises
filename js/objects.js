@@ -14,8 +14,7 @@
 
     const person = {
         firstName: "Rick ",
-        lastName: "Sanchez",
-        sayHello: "Hello from ",
+        lastName: "Sanchez"
     }
     console.log(person.firstName)
     console.log(person.lastName)
@@ -30,9 +29,11 @@
      * Example
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
+    person.sayHello = function () {
+        return `Hello ${this.firstName} ${this.lastName}`;
 
-    console.log(person.sayHello + person.firstName + person.lastName)
-
+    }
+    console.log(person.sayHello())
 
     /** TODO:
      * HEB has an offer for the shoppers that buy products amounting to
@@ -107,9 +108,9 @@
         }
     ];
 
-    console.log(books[0].title) // "The Salmon of Doubt"
-    console.log(books[0].authorFirstName) // "Douglas"
-    console.log(books[0].authorLastName) // "Adams"
+    console.log(books[0].title)
+    console.log(books[0].authorFirstName)
+    console.log(books[0].authorLastName)
 
     /**
      * TODO:
