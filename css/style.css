@@ -1,0 +1,23 @@
+/*h1 {*/
+/*    color: red;*/
+/*}*/
+
+.fancy-header {
+    color: purple; /* single line comment */
+    text-decoration: underline;
+}
+
+
+
+
+
+
+/*.red-paragraph {*/
+/*    color: #a60505;*/
+/*    text-transform: capitalize;*/
+/*}*/
+/*#paragraph1 {*/
+/*    font-style: italic;*/
+/*}*/
+
+/*.red-paragraph.smaller.*/
