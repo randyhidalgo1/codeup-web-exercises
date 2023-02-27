@@ -1,3 +1,16 @@
+
+function inNumericAndNotNaN(input){
+    return !isNaN(parseFloat(input)) && typeof input !== null && typeof input !== "boolean"
+    typeof input !== "string";
+}
+
+function isNumericOrNumericString(input) {
+        return !isNaN(parseFloat(input)) && input !== null && typeof input !== "boolean";
+}
+function isANumber(value){
+    return isNumericOrNumericString(value);
+}
+
 function parseNumber(input) {
     if (typeof input === 'number') {
         return input;
@@ -9,25 +22,20 @@ function parseNumber(input) {
 
     return  Error('Invalid input');
 }
-parseNumber("123"); // returns 123
-parseNumber(123); // returns 123
-parseNumber("-8.22"); // returns -8.22
-parseNumber("-25"); // returns -25
-parseNumber(3.39); // returns 3.39
-parseNumber("3.39"); // returns 3.39
-parseNumber("foo"); // throws an error
 
-//OR
-
-
-
-function increment(num) {
-    if (num === null || typeof num === 'boolean' || typeof num === 'object' || typeof num === 'string' && isNaN(num)) {
-        return false;
+function increment (value) {
+    if (isNumericOrNumericString(value)) {
+        return parseFloat(value) + 1
     }
-    return Number(num) + 1;
+    return false;
 }
 
+function decrement (value) {
+    if (isNumericOrNumericString(value)) {
+        return parseFloat(value) - 1
+    }
+    return false;
+}
 function getHighestNumber(num1, num2, num3) {
     // Check that all arguments are numbers
     if (typeof num1 !== "number" || typeof num2 !== "number" || typeof num3 !== "number") {
@@ -38,12 +46,199 @@ function getHighestNumber(num1, num2, num3) {
     return Math.max(num1, num2, num3);
 }
 
-
-function square(number) {
-    return number * number;
+function multiply (input1){
+    if (isNumericOrNumericString(input1)) return false;
+    return parseFloat(input1) * parseFloat(input1)
 }
-square(16);
+function square(input1){
+    if (!isNumericOrNumericString(input1)) return false;
+    return parseFloat(input1) * parseFloat(input1);
+}
 
+function sumOfSquares(input1, input2){
+    if (!isNumericOrNumericString(input1) || !isNumericOrNumericString(input2)) return false;
+    return (parseFloat(input1) * parseFloat(input1)) + (parseFloat(input2) * parseFloat(inpout2));
+}
+
+function isPalindrome(str){
+    if (isNumericOrNumericString(str) || str === undefined) return false;
+    return str.toLowerCase().split('').reverse().join('');
+}
+
+
+--------------------------------------
+
+    "use strict";
+
+/**
+ * Write your solutions here.
+ *
+ * **Note**: While normally it is good practice to wrap your javascript in an
+ * immediately invoked function expression (iife), you should _not_ do that
+ * here. If you do, the automated tests will not be able to see your functions.
+ */
+
+function isGreaterThan (num1, num2){
+    if (num1 > num2)
+        return true
+    else (num1 < num2 || `string`)
+    return false
+}
+console.log(isGreaterThan(9.3, 7.4))            //true
+console.log(isGreaterThan(3.14, 3.14))          // false
+console.log(isGreaterThan(7.4, 9.3))            // false
+console.log(isGreaterThan(-9.3, 7.4))           // false
+console.log(isGreaterThan(-3.14, 3.14))         // false
+console.log(isGreaterThan(-7.4, 9.3))           // false
+console.log(isGreaterThan(9.3, -7.4))           // true
+console.log(isGreaterThan(3.14, -3.14))         // true
+console.log(isGreaterThan(7.4, -9.3))           // true
+console.log(isGreaterThan(-9.3, -7.4))          // false
+console.log(isGreaterThan(-3.14, -3.14))        // false
+console.log(isGreaterThan(-7.4, -9.3))          // true
+console.log(isGreaterThan(null, null))          // false
+console.log(isGreaterThan('Seven', 'eight'))    // false
+
+
+function isLessThan(num1, num2) {
+    if (typeof num1 !== 'number' || typeof num2 !== 'number') {
+        return false;
+    }
+    if (num1 < num2) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+console.log(isLessThan(9.3, 7.4))            // false
+console.log(isLessThan(3.14, 3.14))          // false
+console.log(isLessThan(7.4, 9.3))            // true
+console.log(isLessThan(-9.3, 7.4))           // true
+console.log(isLessThan(-3.14, 3.14))         // true
+console.log(isLessThan(-7.4, 9.3))         // true
+console.log(isLessThan(9.3, -7.4))           // false
+console.log(isLessThan(3.14, -3.14))         // false
+console.log(isLessThan(7.4, -9.3))         // false
+console.log(isLessThan(-9.3, -7.4))          // true
+console.log(isLessThan(3.14, -3.14))        // false
+console.log(isLessThan(-7.4, -9.3))        // false
+console.log(isLessThan(null, null))          // false
+console.log(isLessThan('Seven', 'eight'))    // false
+
+
+function isEqualNumber(num1, num2) {
+    if (num1 === null || num2 === null) {
+        return false;
+    }
+    return num1 === num2;
+}
+
+console.log(isEqualNumber(9.3, 7.4))            // false
+console.log(isEqualNumber(3.14, 3.14))          // true
+console.log(isEqualNumber(7.4, 9.3))            // false
+console.log(isEqualNumber(-9.3, 7.4))           // false
+console.log(isEqualNumber(-3.14, 3.14))         // false
+console.log(isEqualNumber(-7.4, 9.3))           // false
+console.log(isEqualNumber(9.3, -7.4))           // false
+console.log(isEqualNumber(3.14, -3.14))         // false
+console.log(isEqualNumber(7.4, -9.3))           // false
+console.log(isEqualNumber(-9.3, -7.4))          // false
+console.log(isEqualNumber(-3.14, -3.14))        // true
+console.log(isEqualNumber(-7.4, -9.3))         // false
+console.log(isEqualNumber(null, null))          // false
+console.log(isEqualNumber('Seven', 'eight'))    // false
+
+function isEqual (input1, input2){
+    return input1 === input2;
+}
+console.log(isEqual("Bill", "Bill"))    // true
+console.log(isEqual(9, 9))              // true
+console.log(isEqual(null, null))        // true
+console.log(isEqual(false, false))      // true
+console.log(isEqual("Codeup", "time"))  // false
+console.log(isEqual("James", "Jimmy"))    // false
+console.log(isEqual(null, true))        // false
+console.log(isEqual(true, false))       // false
+console.log(isEqual('4', 4))           // false
+
+function isNot (input){
+    return input ===!true
+}
+console.log(isNot(false))         // true
+console.log(isNot(true))             // false
+console.log(isNot("Bob"))            // false
+console.log(isNot(null))             // false)
+
+
+function calcAbs(num) {
+    if (typeof num !== 'number' || isNaN(num)) {
+        return 0;
+    }
+    return Math.abs(num);
+}
+
+function calcCube(num) {
+    if (typeof num !== 'number' || isNaN(num)) {
+        return 0;
+    }
+    return Math.pow(num, 3)
+}
+function isTypeMatch(a, b) {
+    return typeof a === typeof b;
+
+}
+function findLongestString(str1, str2) {
+    if (typeof str1 !== 'string') {
+        str1 = '';
+    }
+    if (typeof str2 !== 'string') {
+        str2 = '';
+    }
+    return (str1.length > str2.length) ? str1 : str2;
+}
+
+function isFactor(num1, num2) {
+    if (typeof num1 !== 'number' || typeof num2 !== 'number' || num2 === 0) {
+        return false;
+    }
+    return num2 % num1 === 0;
+}
+
+
+
+//
+//
+//
+//
+//
+//
+// parseNumber("123"); // returns 123
+// parseNumber(123); // returns 123
+// parseNumber("-8.22"); // returns -8.22
+// parseNumber("-25"); // returns -25
+// parseNumber(3.39); // returns 3.39
+// parseNumber("3.39"); // returns 3.39
+// parseNumber("foo"); // throws an error
+//
+// //OR
+//
+//
+//
+// function increment(num) {
+//     if (num === null || typeof num === 'boolean' || typeof num === 'object' || typeof num === 'string' && isNaN(num)) {
+//         return false;
+//     }
+//     return Number(num) + 1;
+// }
+//
+//
+//
+// function square(number) {
+//     return number * number;
+// }
+// square(16);
+//
 
 
 
