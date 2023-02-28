@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,100&display=swap');
 
 * {
-    background-image: url(/images/pexels-henry-&-co-1939485.jpg);
+    background-image: url(/images/pexels-miguel.jpg);
+    background-position: center;
+    background-size: 1500px;
     box-sizing: border-box;
     background-color: floralwhite;
 }
@@ -52,8 +54,8 @@ h1, h2, h3 {
 
 .tables {
     border: 1px solid black;
-    padding: 1px;
-    border-spacing: 1px;
+    padding: 10px;
+    border-spacing: 10px;
     /*border-collapse: collapse;*/
     font-family: "American Typewriter", sans-serif;
     font-size: 10px;
@@ -73,9 +75,9 @@ h1, h2, h3 {
     display: flex;
     flex: 1 1 25%;
     justify-content: left;
-    align-items: normal; /* vertically centers the images */
+    align-items: normal;
     flex-wrap: wrap; /* allows the images to wrap to a new line if necessary */
     max-width: 25%;
-    child-align: right;
+    child-align: left;
     margin: 10px;
 }
