@@ -1,4 +1,4 @@
-* {
+*       {
     box-sizing: border-box;
     margin: 0px;
     padding: 5px;
@@ -55,6 +55,45 @@ p, h1, h2, h3, h4, h5, h6 {
 #root, #__next {
     isolation: isolate;
 }
+/*Table resets*/
+table th, table td {
+    border: 1px;
+    border-collapse: collapse;
+}
+
+/*revert white space for safari*/
+textarea {
+    white-space: revert;
+}
+
+::placeholder {
+    color: unset;
+    font: inherit;
+}
+
+/* reset list styles*/
+/*ul, ol {*/
+/*    list-style: none;*/
+/*}*/
+
+a, a:visited {
+    text-decoration: none;
+    color: unset;
+}
+
+.clickable,
+label,
+input[type=button],
+input[type=submit],
+input[type=file],
+button {
+    cursor: pointer;
+}
+
+input {
+    outline: unset;
+}
+
 
 
 
