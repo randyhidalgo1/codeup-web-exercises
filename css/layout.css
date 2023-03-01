@@ -19,9 +19,8 @@
 .container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    row-gap: 20px;
-
+    align-items: center;
+    /*row-gap: 20px;*/
 }
 /* Combo classes to extend the container's versatility */
 .container.grow {
@@ -89,7 +88,7 @@
 }
 /* Combo classes to extend the column's versatility */
 .column.shrink {
-    flex: 0 1 80;
+    flex: 0 1 auto;
 }
 .column.text-center{
     text-align: center;
