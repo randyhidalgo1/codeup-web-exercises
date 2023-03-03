@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forms</title>
+    <link rel="stylesheet" href="css/resets.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/forms.css">
+</head>
+<body>
+<form method="post" action="https://request-inspector.glitch.me/">
+    <label for="username">Username</label>
+    <input type="text" id="username" name="username">
+    <br>
+    <br>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password">
+    <br>
+    <br>
+    <h4>Marvel or DC?</h4>
+    <label for="marvel">Marvel:</label><input type="radio" name="marveldc" value="Marvel" id="marvel"><br>
+    <label for="dc">DC:</label><input type="radio" name="marveldc" value="DC" id="dc"><br>
+    <input type="submit">
+</form>
+</body>
+</html>
+
+
+
+<!--NOTE: never use "GET" for a password , use "POST" request-->
