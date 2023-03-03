@@ -37,26 +37,26 @@
  *       {name: 'Kenneth Howell', pets: 2}
  *    ]) ➞ 11
  */
-const personsArray = [
-    {name: 'Fernando Mendoza', pets: 1},
-    {name: 'Douglas Hirsh', pets: 8},
-    {name: 'Kenneth Howell', pets: 2}
-]
-// function  totalPets (personsArray) {
-//     let totalPets = 0;
-//     for (let i = 0; i < personsArray.length; i++) {
-//         totalPets += personsArray[i].pets
-//     }
-//     return totalPets;
+// const personsArray = [
+//     {name: 'Fernando Mendoza', pets: 1},
+//     {name: 'Douglas Hirsh', pets: 8},
+//     {name: 'Kenneth Howell', pets: 2}
+// ]
+// // function  totalPets (personsArray) {
+// //     let totalPets = 0;
+// //     for (let i = 0; i < personsArray.length; i++) {
+// //         totalPets += personsArray[i].pets
+// //     }
+// //     return totalPets;
+// // }
+//
+// // OR another example
+//
+// function totalPets(personsArray) {
+//     let total = 0;
+//     personsArray.forEach(person => total += person.pets);
+//     return total;
 // }
-
-// OR another example
-
-function totalPets(personsArray) {
-    let total = 0;
-    personsArray.forEach(person => total += person.pets);
-    return total;
-}
 
 /**
  * Find the Smallest and Biggest Numbers
@@ -70,6 +70,30 @@ function totalPets(personsArray) {
  * Notes
  * All test arrays will have at least one element and are valid.
  */
+
+// function minMax(num1, num2, num3) {
+//     // Check that all arguments are numbers
+//     if (typeof num1 !== "number" || typeof num2 !== "number" || typeof num3 !== "number") {
+//         return false;
+//     }
+//
+//     // Find the highest number using Math.max
+//     return Math.max(num1, num2, num3);
+// }
+
+// function minMax(numsArray) {
+//     const minandMAx = [];
+//     minAndMax[]
+// }
+//     return {
+//         Math.min (1, 2, 3, 4, 5),
+//         Math.max (2334454, 5),
+//         Math.min (1),
+//     }
+//
+
+
+
 
 
 /**
@@ -86,3 +110,4 @@ function totalPets(personsArray) {
  * Examples
  * >> sortDrinkByPrice(drinks) ➞ [{name: "lime", price: 10}, {name: "lemonade", price: 50}]
  */
+
