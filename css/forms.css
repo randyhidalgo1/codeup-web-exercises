@@ -1,3 +1,53 @@
 fieldset{
-    border-radius: 100px;
+    border-radius: 0px;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+}
+
+.email {
+    display: flex;
+    justify-content: center;
+    padding: 15px 15px;
+    text-align: center;
+    gap: 15px;
+}
+
+.row-email {
+
+}
+
+
+.bio {
+    display: flex;
+    justify-content: center;
+    padding: 15px 15px;
+}
+.about {
+    display: flex;
+    justify-content: center;
+    padding: 15px 15px;
+}
+
+.browser {
+    display: flex;
+    justify-content: center;
+    padding: 15px 15px;
+}
+.submit {
+    display: flex;
+    justify-content: center;
+    padding: 15px 15px;
+}
+/*.row {*/
+/*    display: flex;*/
+/*    justify-content:;*/
+/*}*/
+/*.column {*/
+/*    display: flex;*/
+/*    justify-content:;*/
+/*    align-items: flex-end;*/
+
 }

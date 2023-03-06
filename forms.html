@@ -2,67 +2,60 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Forms</title>
+    <title>Register with us</title>
     <link rel="stylesheet" href="css/resets.css">
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/forms.css">
 </head>
 <body>
 <div class="page-wrapper">
-<form method="post" action="https://request-inspector.glitch.me/">
-    <fieldset>
-        <label for="username">Username</label>
-        <input type="text" id="username" name="username">
-        <br>
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password">
-    </fieldset>
-    <br>
-    <fieldset>
-    <h4><label for="comments">Please Leave Your Comments:</label></h4>
-    <textarea name="comments" id="comments" cols="48" rows="10"></textarea>
-    <br>
-    <br>
-    <h4>Marvel or DC?</h4>
-    <label for="marvel">Marvel:</label><input type="radio" name="marveldc" value="Marvel" id="marvel"><br>
-    <label for="dc">DC:</label><input type="radio" name="marveldc" value="DC" id="dc"><br>
-    </fieldset>
-    <fieldset>
-    <legend><h4>Choose your extras:</h4></legend>
-    <input type="checkbox" name="extras" value="Provolone" id="provolone"><label for="provolone">Provolone</label><br>
-    <input type="checkbox" name="extras" value="Cheddar" id="cheddar"><label for="cheddar">Cheddar</label><br>
-    <input type="checkbox" name="extras" value="American Cheese" id="american"><label for="american">American Cheese</label><br>
-    <input type="checkbox" name="extras" value="Swiss" id="swiss"><label for="swiss">Swiss Cheese</label><br>
-    <input type="checkbox" name="extras" value="Pepper Jack" id="pepperJack"><label for="pepperJack">Pepper Jack</label><br>
-    <input type="checkbox" name="extras" value="Jalapenos" id="jalapenos"><label for="jalapenos">Sliced Jalapenos</label><br>
-    <input type="checkbox" name="extras" value="Mushrooms" id="mushrooms"><label for="mushrooms">Sauteed Mushrooms</label><br>
-    <input type="checkbox" name="extras" value="Onions" id="onions"><label for="onions">Grilled Onions</label><br>
-    <input type="checkbox" name="extras" value="Bacon" id="bacon"><label for="bacon">Extra Bacon</label><br>
-    <input type="checkbox" name="extras" value="Guacamole" id="guacamole"><label for="guacamole">Guacamole</label><br>
-    </fieldset>
-    <br>
-    <h4><label for="destination">Choose your destination:</label></h4>
-    <select name="destination" id="destination">
-        <option value="Hawaii">Hawaii</option>
-        <option value="Yucatan">Yucatan</option>
-        <option value="Greece">Greece</option>
-        <option value="Florida">Florida</option>
-        <option value="California">California</option>
-    </select>
-    <input type="reset">
-    <br>
-    <h4>Assorted inputs</h4>
-    <input type="date" name="date"><br>
-    <!-- date can take min and max attributes -->
-    <input type="color" name="pickColor"><br>
-    <input type="range" name="evaluation"><br>
-    <!-- range can take min, max, and step attributes -->
-    <input type="number" name="number"><br>
-    <!-- number can take min, max, and step attributes -->
-    <!-- email, tel, and url inputs are predominantly mobile-oriented -->
-    <br>
-    <input type="submit">
-</form>
+    <form method="post" action="https://request-inspector.glitch.me/">
+        <div class="title"> <h1 class="title">Register with Us</h1>
+        </div>
+        <div class="email">
+            <div class="row-email">
+                <fieldset>
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" name=email">
+            </div>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password">
+                </fieldset>
+        </div>
+        <div class="bio">
+            <fieldset>
+                <h4><label for="comments">Bio:</label></h4>
+                <textarea name="comments" id="comments" cols="48" rows="10"></textarea>
+            </fieldset>
+        </div>
+        <div class="about">
+            <fieldset>
+                <h4>How did you hear about us</h4>
+                <label for="billboard">billboard:</label><input type="radio" name="billboard" value="billboard" id="billboard"><br>
+                <label for="radio advertisement">radio advertisement:</label><input type="radio" name="radio advertisement" value="radio advertisement" id="radio advertisement"><br>
+                <label for="internet advertisement">internet advertisement:</label><input type="radio" name="internet advertisement" value="internet advertisement" id="internet advertisement"><br>
+                <label for="other">other:</label><input type="radio" name="other" value="other" id="other">
+            </fieldset>
+        </div>
+        <div class="browser">
+            <fieldset>
+                <h4><label for="browser">What browser are you using:</label></h4>
+                <select name="browser" id="browser">
+                    <option value="Chrome">Chrome</option>
+                    <option value="Bing">Bing</option>
+                    <option value="Safari">Safari</option>
+                    <option value="Fire FOx">Fire Fox</option>
+                    <option value="Duck Go">Duck Go</option>
+                </select>
+            </fieldset>
+           </div>
+            <div class="submit">
+                        <fieldset>
+                            <input type="submit">
+                        </fieldset>
+            </div>
+        </div>
+    </form>
 </div>
 </body>
 </html>

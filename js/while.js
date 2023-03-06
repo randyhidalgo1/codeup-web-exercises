@@ -20,3 +20,20 @@
 //     console.log(accumulator);
 //     i++;
 // }
+
+
+let x = 10;
+
+while (x <=100) {
+    console.log(`"Speed of the car is ${x} MPH"`);
+    x += 10;
+}
+
+let a = 1;
+let b = 10;
+do {
+    console.log(`The number is ${a}`);
+    a++;
+} while (a <= b)
+
+

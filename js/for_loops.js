@@ -33,3 +33,38 @@ for (let i = 1; i <= 9; i++) {
 for (let i = 100; i >= 5; i -= 5) {
    console.log(i);
 }
+
+
+let num = 10 + 2;
+
+if (num > 2 && num < 20){
+    console.log("TRUE")
+} else {
+    console.log("FALSE")
+}
+
+
+
+let user = "employee";
+
+if(user === 'employee') {
+    console.log("Successfully Logged in");
+} else if ("guest") {
+    console.log("Login Denied");
+}
+
+let myName = "randy"
+let nameLength = myName.length;
+
+if (nameLength === 5) {
+    alert("Exactly")
+} else if (nameLength >=5) {
+    alert("Over 5")
+} else  {
+    alert("under 5");
+}
+
+
+
+
+
