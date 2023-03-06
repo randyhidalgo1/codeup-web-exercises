@@ -28,7 +28,8 @@ fieldset{
 .about {
     display: flex;
     justify-content: center;
-    padding: 15px 15px;
+    padding: 30px 30px;
+    margin: 30px 30px;
 }
 
 .browser {
@@ -50,4 +51,3 @@ fieldset{
 /*    justify-content:;*/
 /*    align-items: flex-end;*/
 
-}
