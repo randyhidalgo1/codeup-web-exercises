@@ -31,6 +31,10 @@
     margin-top: 25px;
     margin-left: 30px;
 }
+.main {
+    min-width: 66%;
+    margin-top: -98px;
+}
 .section2 {
     display: flex;
     justify-content: center;
@@ -47,6 +51,21 @@
     justify-content: flex-end;
     gap: 10px;
     margin-right: 20px;
+}
+.twitter-logo {
+    height: 20px;
+    width: 20px;
+    margin-top: -22px;
+}
+.fb-logo {
+    height: 20px;
+    width: 20px;
+    margin-top: -22px;
+}
+.insta-logo {
+    height: 20px;
+    width: 20px;
+    margin-top: -22px;
 }
 @media screen and (max-width: 768px) {
     .box {
