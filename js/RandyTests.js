@@ -1,4 +1,44 @@
 
+function isNotPalindrome(str){
+    if (typeof (str) || str === "string") return false;
+    return str.toLowerCase().split('').reverse().join('');
+}
+
+
+function isNotPalindrome(str) {
+    if (str === undefined || str === null || typeof str !== "string") {
+        return true;
+    }
+
+    str = str.replace(/[^A-Za-z0-9]/g, "").toLowerCase();
+
+    return str !== str.split("").reverse().join("");
+}
+
+function isNotPalindrome(str) {
+    if (typeof str !== "string") return true;
+    if (str === "") return false;
+
+    let i = 0;
+    let j = str.length - 1;
+
+    while (i < j) {
+        if (str[i].toLowerCase() !== str[j].toLowerCase()) {
+            return true;
+        }
+        i++;
+        j--;
+    }
+
+    return false;
+}
+
+function isNotPalindrome(str) {
+    if (typeof str !== "string") return true;
+    const reversedStr = str.split("").reverse().join("");
+    return str.toLowerCase() !== reversedStr.toLowerCase();
+}
+
 function inNumericAndNotNaN(input){
     return !isNaN(parseFloat(input)) && typeof input !== null && typeof input !== "boolean"
     typeof input !== "string";

@@ -4,7 +4,7 @@
 // let value= (a, b, c)
 // console.log (value)
 // answer 3
-
+h  c
 // let d = "hello";
 // let e = false;
 // console.log(d++)
