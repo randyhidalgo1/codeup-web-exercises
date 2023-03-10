@@ -1,4 +1,103 @@
 
+
+// Your solutions will go here :)
+
+function lowerCase(str) {
+    if (typeof str !== "string") return false;
+    return str.toLowerCase();
+}
+
+function isAllLowerCase(str) {
+    if (typeof str !== "string") return false;
+    return str.toLowerCase()=== str;
+}
+
+function isAllUpperCase(str) {
+    if (typeof str !== "string") return false;
+    return str === str.toUpperCase();
+}
+function isNotPalindrome(str) {
+    if (typeof str !== "string") return true;
+    const reversedStr = str.split("").reverse().join("");
+    return str.toLowerCase() !== reversedStr.toLowerCase();
+}
+function multiplyBy2(num) {
+    if (typeof num === 'undefined' || num === null ||
+        typeof num === 'boolean' || Array.isArray(num) || isNaN(num)) {
+        return false;
+    }
+    return num * 2;
+}
+
+function convertHourToSec(hours) {
+    if (typeof hours === 'string') {
+        hours = parseFloat(hours);
+    }
+    if (typeof hours !== 'number' || isNaN(hours) || hours < 0) {
+        return false;
+    }
+    return hours * 3600;
+}
+function getLowestNumber(num1, num2, num3) {
+    if (num1 === null || num2 === null || num3 === null ||
+        typeof num1 === "boolean" || typeof num2 === "boolean" || typeof num3 === "boolean") {
+        return false;
+    }
+    num1 = Number(num1);
+    num2 = Number(num2);
+    num3 = Number(num3);
+
+    if (isNaN(num1) || isNaN(num2) || isNaN(num3)) {
+        return false;
+    }
+    return Math.min(num1, num2, num3);
+}
+function addStringLengths(string1, string2) {
+    if (typeof string1 !== "string" || typeof string2 !== "string") {
+        return false;
+    }
+    return string1.length + string2.length;
+}
+function subtract(num1, num2) {
+    if (num1 === null || num2 === null ||
+        typeof num1 === "undefined" || typeof num2 === "undefined" ||
+        typeof num1 === "boolean" || typeof num2 === "boolean" ||
+        typeof num1 === "object" || typeof num2 === "object" ||
+        Array.isArray(num1) || Array.isArray(num2)) {
+        return false;
+    }
+    if (typeof num1 === "string") {
+        num1 = Number(num1);
+    }
+    if (typeof num2 === "string") {
+        num2 = Number(num2);
+    }
+    if (isNaN(num1) || isNaN(num2)) {
+        return false;
+    }
+    return num1 - num2;
+}
+
+function calculateChange(totalCost, cashPaid) {
+    if (arguments.length !== 2 || typeof totalCost !== 'number' || typeof cashPaid !== 'number' ||
+        totalCost <= 0 || cashPaid <= 0) {
+        return false;
+    }
+    const change = cashPaid - totalCost;
+    const dollars = Math.floor(change);
+    const cents = Math.round((change - dollars) * 100);
+    return '$' + dollars + '.' + (cents < 10 ? '0' : '') + cents;
+}
+
+
+function multiplyBy2(num) {
+    if (typeof num === 'undefined' || num === null ||
+        typeof num === 'boolean' || Array.isArray(num) || isNaN(num)) {
+        return false;
+    }
+    return num * 2;
+}
+
 function isNotPalindrome(str){
     if (typeof (str) || str === "string") return false;
     return str.toLowerCase().split('').reverse().join('');
