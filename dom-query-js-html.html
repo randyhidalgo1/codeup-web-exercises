@@ -57,7 +57,12 @@
         let subParagraphs = document.querySelector(`.sub-paragraph`);
     //
     //     // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-        subParagraphs[0].innerText="Mission Accomplished";
+        subParagraphs.forEach(function(element, index) {
+            if (index === 0) {
+                element.innerText = "Mission Accomplished!!";
+            }
+        })
+        //         subParagraphs[0].innerText= 'Mission Accomplished';
     })();
 </script>
 </body>
