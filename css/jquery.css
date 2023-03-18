@@ -1,5 +1,14 @@
+body {
+    font-family: "Helvetica Neue", sans-serif;
+}
+
 .page-wrapper {
-    border-color: red;
-    border-width: 100px;
-    background-color: #76af4c;
+    margin-bottom: 25px;
+}
+
+h3 {
+    width: fit-content;
+    border: 1px solid black;
+    padding: 5px;
+    cursor: pointer;
 }
