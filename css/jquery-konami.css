@@ -1,12 +1,7 @@
 body {
     font-family: "Helvetica Neue", sans-serif;
     background-color: #537a1b;
-    margin-bottom: 25px;
-}
-
-.page-wrapper {
-    margin-bottom: 25px;
-
+    margin-bottom: 225px;
 }
 
 .header {
@@ -20,6 +15,7 @@ body {
 #cheater-button {
     display: flex;
     flex-direction: row;
+    font-size: 30px;
     margin: 50px;
     width: 90%;
     height: 90%;
