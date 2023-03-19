@@ -1,0 +1,33 @@
+body {
+    font-family: "Helvetica Neue", sans-serif;
+    background-color: #537a1b;
+    margin-bottom: 25px;
+}
+
+.page-wrapper {
+    margin-bottom: 25px;
+
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    font-style: oblique ;
+    color: #000000;
+    background-color: #537a1b;
+}
+
+#cheater-button {
+    display: flex;
+    flex-direction: row;
+    margin: 50px;
+    width: 90%;
+    height: 90%;
+    background-color: green;
+    align-items: center;
+    justify-content: center;
+}
+
+.para {
+    font-size: 30px;
+}
