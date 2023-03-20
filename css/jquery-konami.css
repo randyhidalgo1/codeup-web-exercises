@@ -1,6 +1,6 @@
 body {
     font-family: "Helvetica Neue", sans-serif;
-    background-color: #537a1b;
+    background-color: #A22D2A;
     margin-bottom: 225px;
 }
 
@@ -8,22 +8,29 @@ body {
     display: flex;
     justify-content: center;
     font-style: oblique ;
-    color: #000000;
-    background-color: #537a1b;
+    color: #ffffff;
+    background-color: #A22D2A;
 }
 
-#cheater-button {
+#cheat-button {
     display: flex;
     flex-direction: row;
     font-size: 30px;
     margin: 50px;
     width: 90%;
     height: 90%;
-    background-color: green;
+    color: #ffffff;
+    background-color: #F04A3D;
     align-items: center;
     justify-content: center;
 }
 
 .para {
     font-size: 30px;
+    color: white;
+}
+
+.code {
+    font-size: 40px;
+    color: #F2943C;
 }

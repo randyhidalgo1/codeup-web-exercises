@@ -10,10 +10,10 @@ $(document).keyup(function(event) {
     // Check if the key pressed matches the next key in the konami code sequence
     if (event.keyCode === konamiCode[konamiIndex]) {
         konamiIndex++;
-        // If the whole sequence is entered correctly, show the cheater button
+        // If the whole sequence is entered correctly, show the cheat button
         if (konamiIndex === konamiCode.length) {
-            let $cheaterButton = $("<button>").text("Click for your prize").attr("id", "cheater-button");
-            $("body").append($cheaterButton);
+            let $cheatButton = $("<button>").text("Click for your prize").attr("id", "cheat-button");
+            $("body").append($cheatButton);
         }
     } else {
         // If a wrong key is pressed, reset the konami code index
@@ -22,6 +22,6 @@ $(document).keyup(function(event) {
 });
 
 // Click event listener for the cheater button
-$(document).on("click", "#cheater-button", function() {
+$(document).on("click", "#cheat-button", function() {
     alert("You are a winner!");
 });
