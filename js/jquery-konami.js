@@ -7,7 +7,7 @@ let konamiIndex = 0;
 
 // Event listener for keyup events
 $(document).keyup(function(event) {
-    // Check if the key pressed matches the next key in the konami code sequence
+// Check if the key pressed matches the next key in the konami code sequence
     if (event.keyCode === konamiCode[konamiIndex]) {
         konamiIndex++;
         // If the whole sequence is entered correctly, show the cheat button
@@ -16,7 +16,7 @@ $(document).keyup(function(event) {
             $("body").append($cheatButton);
         }
     } else {
-        // If a wrong key is pressed, reset the konami code index
+// If a wrong key is pressed, reset the konami code index
         konamiIndex = 0;
     }
 });
