@@ -3,7 +3,6 @@ body {
     background-color: #A22D2A;
     margin-bottom: 225px;
 }
-
 .header {
     display: flex;
     justify-content: center;
@@ -12,7 +11,6 @@ body {
     color: #F2943C;
     background-color: #A22D2A;
 }
-
 #cheat-button {
     display: flex;
     flex-direction: column;
@@ -24,14 +22,11 @@ body {
     color: #ffffff;
     background-color: #F04A3D;
     align-items: center;
-
 }
-
 .para {
     font-size: 40px;
     color: #F2943C;
 }
-
 .code {
     font-size: 40px;
     color: #F2943C;
