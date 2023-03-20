@@ -20,8 +20,7 @@ $(document).keyup(function(event) {
         konamiIndex = 0;
     }
 });
-
 // Click event listener for the cheater button
 $(document).on("click", "#cheat-button", function() {
-    alert("You are a winner!");
+    alert("You are a winner and have another 50 lives!");
 });
