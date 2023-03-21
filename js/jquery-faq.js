@@ -4,14 +4,14 @@ $(document).ready(function() {
             let image2 = "images/pic2.jpg";
             let image3 = "images/pic3.jpg";
 
-// Left frame to right
+// Left frame button to right
             $("#left-frame button").click(function() {
             let centerImage = $("#center-frame img").attr("src");
             $("#left-frame img").attr("src", centerImage);
             $("#center-frame img").attr("src", image1);
             });
 
-// Center frame randomly
+// Center frame button randomly
             $("#center-frame button").click(function() {
             let randomNumber = Math.floor(Math.random() * 2);
             if (randomNumber === 0) {
@@ -25,7 +25,7 @@ $(document).ready(function() {
             }
             });
 
-// Right frame to left
+// Right frame button to left
             $("#right-frame button").click(function() {
             let centerImage = $("#center-frame img").attr("src");
             $("#right-frame img").attr("src", centerImage);
@@ -57,8 +57,8 @@ $(document).ready(function() {
             $('dt').on('click', function(){
             $(this).next().fadeToggle();
             });
-//Change H3's to fade when clicked
-            $('h3').on('click', function(){
-            $(this).next().fadeToggle();
-
-            });
+// //Change H3's to fade when clicked
+//             $('h3').on('click', function(){
+//             $(this).next().fadeToggle();
+//
+//             });
