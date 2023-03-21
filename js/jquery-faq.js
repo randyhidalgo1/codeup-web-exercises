@@ -43,7 +43,6 @@ $(document).ready(function() {
             $(this).next().find("li").css("font-weight", "bold");
             });
 //Green button named "highlighter" will turn each last li to yellow
-
             $(document).ready(function() {
             $(".button").click(function () {
             $("ul li:last-child").css("background-color", "yellow");
