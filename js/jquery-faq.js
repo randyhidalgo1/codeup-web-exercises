@@ -38,7 +38,7 @@ $(document).ready(function() {
             });
             });
 
-//Change H3's to bold
+//Change H3's to bold's li's when clicked
             $("h3").click(function() {
             $(this).next().find("li").css("font-weight", "bold");
             });
