@@ -42,7 +42,7 @@ $(document).ready(function() {
             $("h3").click(function() {
             $(this).next().find("li").css("font-weight", "bold");
             });
-//Change last li to yellow
+//Green button named "highlighter" will turn each last li to yellow
 
             $(document).ready(function() {
             $(".button").click(function () {
