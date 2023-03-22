@@ -43,9 +43,6 @@ td {
 }
 
 #button {
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
     padding: 20px 30px;
     background-color: #007bff;
     color: #fff;
