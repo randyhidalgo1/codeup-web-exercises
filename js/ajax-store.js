@@ -92,7 +92,7 @@
         ],
         "price": 290
     }, {
-        "title": "Chainsaw",
+        "title": "Chainsaws",
         "quantity": 15,
         "categories": [
             "tool",
@@ -100,7 +100,7 @@
             "outdoor"
         ],
         "price": 250
-    }
+    },
     ]
     function newItem(e){
         e.preventDefault()
