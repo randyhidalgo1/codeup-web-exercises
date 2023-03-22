@@ -1,3 +1,4 @@
+"use strict";
 (async function() {
 
     const getInventory = async () => {
@@ -10,7 +11,6 @@
 
 })();
 (function() {
-    "use strict";
 
     let button = document.getElementById('button');
     let insertProducts = document.getElementById('insertProducts');
