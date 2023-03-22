@@ -9,12 +9,30 @@
         console.log(inventory);
 
 })();
+(function() {
+    "use strict";
 
-$(document).ready(function() {
-    $.get("inventory.json", function(data) {
-        $.each(data, function(index, product) {
-            let row = $("<tr><td>" + product.title + "</td><td>" + product.quantity + "</td><td>" + product.catergories + "</td></tr>");
-            $("#productsTableBody").append(row);
-        });
-    }, "json");
-});
+    let button = document.getElementById('button');
+    let insertProducts = document.getElementById('insertProducts');
+
+    button.addEventListener('click', () => {
+        $.get('data/inventory.json')
+            .done(function(data) {
+                insertProducts.innerHTML = '';
+                $.each(data, function(index, product) {
+                    insertProducts.innerHTML += `
+              <tr>
+                <td>${product.title}</td>
+                <td>${product.quantity}</td>
+                <td>${product.price}</td>
+                <td>${product.categories.join(', ')}</td>
+              </tr>
+            `;
+                });
+            })
+            .fail(function() {
+                console.log('Fail to load inventory');
+            });
+    });
+
+})();

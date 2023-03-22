@@ -2,10 +2,11 @@
   <title>Online Store</title>
   <link rel="stylesheet" href="css/resets.css">
   <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/ajax-store.css">
 </head>
 <body>
 
-<h1>My Tool Store</h1>
+<h1 class="row">My Tool Store</h1>
 
 <table id="products">
   <thead>
@@ -19,7 +20,7 @@
   <tbody id="insertProducts"></tbody>
 </table>
 
-
+<button class="column" id="button">Refresh Page</button>
 <script>
   (function() {
     "use strict";

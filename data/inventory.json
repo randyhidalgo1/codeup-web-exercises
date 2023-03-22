@@ -29,6 +29,39 @@
   "categories": [
     "tool"
   ],
-  "price": 10
+  "price": 20
+}, {
+  "title": "Wrench",
+  "quantity": 25,
+  "categories": [
+    "tool"
+  ],
+  "price": 25
+}, {
+  "title": "Saw",
+  "quantity": 15,
+  "categories": [
+    "tool",
+    "powered"
+  ],
+  "price": 40
+}, {
+  "title": "Lawnmower",
+  "quantity": 10,
+  "categories": [
+    "tool",
+    "gas",
+    "outdoor"
+  ],
+  "price": 290
+}, {
+  "title": "Chainsaw",
+  "quantity": 15,
+  "categories": [
+    "tool",
+    "gas",
+    "outdoor"
+  ],
+  "price": 250
 }
 ]
