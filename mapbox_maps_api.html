@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>Mapbox Maps</title>
   <script src="js/keys.js"></script>
+<!--    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.js'></script>-->
+<!--    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.css' rel='stylesheet' />-->
   <script src='https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.js'></script>
   <link href='https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.css' rel='stylesheet' />
   <link rel="stylesheet" href="css/resets.css">
@@ -16,13 +18,28 @@
     <div class="row">
       <div class="column justify-center align-center text-center">
         <h1>MapBox</h1>
-        <div id='map' style='width: 1100px; height: 800px;'></div>
+        <div id='map' style='width: 800px; height: 800px;'></div>
         <div class="row">
           <form class="column justify-center align-center text-center gap-10">
             <label for="zoom"> Set Zoom</label>
             <input type="text" name="zoom" id="zoom">
             <button id="zoomSubmit">Zoom Submit</button>
           </form>
+         <div class="column"></div>
+          <form class="column justify-center align-center text-center gap-10">
+          <label for="setMarker">Enter Address</label>
+          <input type="text" name="setMarker" id="setMarker">
+          <button id="setMarkerButton">Set Marker</button>
+          </form>
+<!--            <div class="column">-->
+<!--                <div class='sidebar'>-->
+<!--                    <div class='heading'>-->
+<!--                        <h1>My Restaurants</h1>-->
+<!--                    </div>-->
+<!--                    <div id='listings' class='listings'></div>-->
+<!--                </div>-->
+<!--                <div id="map" class="map"></div>-->
+<!--            </div>-->
         </div>
       </div>
     </div>
@@ -35,16 +52,14 @@
     container: 'map', // container ID
     style: 'mapbox://styles/mapbox/outdoors-v12', // style URL
     center: [-98.48962, 29.4292], // starting position [lng, lat]
-    zoom: 16, // starting zoom
+    zoom: 9, // starting zoom
   });
   const codeUpMarker = new mapboxgl.Marker()
           .setLngLat([-98.4881, 29.4177])
           .addTo(map);
   const codeupPopup = new mapboxgl.Popup()
-          .setLngLat([-98.4881, 29.4177])
-          .setHTML("<h1>Codeup</h1>")
-          .addTo(map);
-
+          .setHTML("<p>Battalion</p>")
+            codeUpMarker.setPopup(codeupPopup);
 </script>
 <script src="js/mapbox-maps.js"></script>
 </body>
