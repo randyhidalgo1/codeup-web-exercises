@@ -9,6 +9,7 @@ document.getElementById("setMarker").addEventListener("click", event => {
         const newMarker = new mapboxgl.Marker()
             .setLonglat(coords)
             .addTo(map);
-        map.setCenter(coords);
+            map.setCenter(coords);
     })
 });
+
