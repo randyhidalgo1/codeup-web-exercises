@@ -3,16 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <title>Current Weather for San Antonio, TX</title>
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="js/keys.js"></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.css' rel='stylesheet' />
     <link rel="stylesheet" href="css/resets.css">
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/weather-map.css">
+        <style>
+        body {
+        background-image: url('images/sky.jpeg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+        }
+        </style>
 </head>
 <body>
-<h1 class="title">The Next 5 days of Weather for San Antonio, TX</h1>
-<div id="weather">
-    <p>Loading weather...</p>
-</div>
+<div class="page-wrapper">
+        <div class="container">
+        <div class="row">
+        <div class="column justify-center align-center">
+        <h1 class="title"></h1>
+        <div id="weather">
+        <p>Loading weather...</p>
+        </div>
+        </div>
+        </div>
+        </div>
+
+        <div class="container">
+        <div class="row">
+        <div class="column justify-center align-center">
+        <h1 class="title"></h1>
+        <div id="weather1">
+        </div>
+        </div>
+        </div>
+        </div>
+
+        <div class="container">
+        <div class="row">
+        <div class="column justify-center align-center text-center">
+        <h1></h1>
+        <div class="column"></div>
+        <form class="marker">
+        <label for="setMarker">Enter Address</label>
+        <input type="text" name="setMarker" id="setMarker">
+        <button id="setMarkerButton">For Weather</button>
+        </form>
+        <div id='map' style='width: 1000px; height: 500px;'></div>
+        </div>
+        </div>
+        </div>
+        </div>
+
+
+<script src="js/mapbox-geocoder-utils.js"></script>
+<script>
+    mapboxgl.accessToken = MAPBOX_API_TOKEN;
+    const map = new mapboxgl.Map({
+        container: 'map', // container ID
+        style: 'mapbox://styles/mapbox/outdoors-v12', // style URL
+        center: [-98.48962, 29.4292], // starting position [lng, lat]
+        zoom: 9, // starting zoom
+    });
+    let e = {
+        lngLat: {
+            lat: 29.4292,
+            lng: -98.48962
+        }
+    };
+    const codeUpMarker = new mapboxgl.Marker()
+        .setLngLat(e.lngLat)
+        .addTo(map);
+    map.on('click', function(e) {
+        codeUpMarker.setLngLat(e.lngLat);
+        console.log(e.lngLat);
+        let lat = e.lngLat.lat;
+        let lon = e.lngLat.lng;
+
+        // Make an API request to OpenWeatherMap
+        fetch('https://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + lon + '&appid=OPEN_WEATHER_APPID')
+        .then(response => response.json())
+        .then(data => {
+        // Display the weather information on the page
+        console.log(data);
+        });
+        });
+</script>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="js/weather-map.js"></script>
 </body>
 </html>

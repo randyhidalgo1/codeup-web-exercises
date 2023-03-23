@@ -1,5 +1,6 @@
+
 $(document).ready(function() {
-    let apiKey = '61ce4662518bf73051bdd0b81d44c0c4';
+    let apiKey ='27e18d6e5218dbc17af1df1d2c62e1d5';
     let urlWeather = 'https://api.openweathermap.org/data/2.5/weather?q=San+Antonio,TX,USA&units=imperial&appid=' + apiKey;
     $.getJSON(urlWeather, function(data) {
         let city = data.name;
@@ -7,14 +8,13 @@ $(document).ready(function() {
         let desc = data.weather[0].description;
         let icon = 'http://openweathermap.org/img/w/' + data.weather[0].icon + '.png';
 
-        $('#weather').html('<p class="para">Current weather for ' + city + ': ' + temp + '&deg;F and ' + desc + '</p><img src="' + icon + '">');
+        $('#weather').html('<p class="para row">Currently in ' + city + ': ' + temp + '&deg;F and ' + desc + '</p><img src="' + icon + '">');
     });
 });
 
 $(document).ready(function() {
-    let apiKey = '61ce4662518bf73051bdd0b81d44c0c4';
+    let apiKey ='27e18d6e5218dbc17af1df1d2c62e1d5';
     let urlForecast = 'https://api.openweathermap.org/data/2.5/forecast?q=San+Antonio,TX,USA&units=imperial&appid=' + apiKey;
-
     $.getJSON(urlForecast, function(data) {
         let forecast = data.list;
          html = '';
@@ -42,12 +42,23 @@ $(document).ready(function() {
                 '</div>';
         }
 
-        $('#weather').html(html);
+        $('#weather1').html(html);
     });
 });
-
 function getDayOfWeek(day) {
     let daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     return daysOfWeek[day];
 }
-
+document.getElementById("setMarkerButton")
+    .addEventListener("click", event => {
+        event.preventDefault();
+        const address = document.getElementById
+        ("setMarker").value;
+        geocode(address, MAPBOX_API_TOKEN).then(coords => {
+            const newMarker = new mapboxgl.Marker()
+                .setLngLat(coords)
+                .addTo(map);
+            // map.setCenter(coords);
+            map.flyTo({center: coords, zoom: 15});
+        })
+    });

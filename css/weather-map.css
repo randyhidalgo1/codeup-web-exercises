@@ -1,29 +1,82 @@
+ body {
+    background-color: deepskyblue;
+    color: whitesmoke;
+    max-width: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+/*Current Weather*/
 #weather {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 20px;
-    max-width: 1100px;
+    max-width: 1920px;
+    font-size: 45px;
 }
-
-.title {
-    font-size: 40px;
+/*5 Day Forecast*/
+#weather1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    max-width: 100%;
+    font-size: 25px;
+}
+/*Email Box*/
+.marker {
+    background-color: #1B346E;
+    border: 5px solid #ccc;
+    padding: 35px;
+    color: whitesmoke;
+    max-width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-inside: 25px;
+    font-size: 30px;
+}
+/*Email Label*/
+label {
+    font-size: 30px;
     font-weight: bold;
-    color: darkslateblue;
+    color: whitesmoke;
     margin: 10px;
     text-align: center;
     width: 100%;
 }
+
+/*Weather Button*/
+#setMarkerButton {
+    background-color: #1B346E;
+    border: 3px solid #ccc;
+    padding: 15px;
+    color: #ffffff;
+    max-width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-inside: 25px;
+    font-size: 30px;
+
+}
+/*.title {*/
+/*    font-size: 30px;*/
+/*    font-weight: bold;*/
+/*    color: darkslateblue;*/
+/*    margin: 10px;*/
+/*    text-align: center;*/
+/*    width: 100%;*/
+/*}*/
 
 .para {
-    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    font-size: 45px;
+    font-weight: 700;
     margin: 10px;
     text-align: center;
-    width: 100%;
-    z-index: -1;
+    max-width: 100%;
+    color: black;
 }
 .forecast {
-    background-color: darkslateblue;
+    background-color: #1B346E;
     border: 1px;
     padding: 30px;
     margin-top: 50px;
@@ -35,8 +88,12 @@
 .forecast-container {
     background-color: #000000;
     border: 1px solid #ccc;
-    padding: 5px;
+    padding: 15px;
     color: whitesmoke;
+    max-width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-inside: 5px;
 }
 
 .date {
