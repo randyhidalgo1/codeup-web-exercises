@@ -16,9 +16,9 @@ document.getElementById("setMarkerButton")
     })
 });
 const restaurants = [
-    {name: "JPrime", longitude: -98.7431, latitude: 29.2672, info: "Great Steaks!"},
-    {name: "Hopdoddy", longitude: -98.5831, latitude: 29.4563, info: "Great Burgers!"},
-    {name: "Franklin Barbecue", longitude: -98.6382, latitude: 29.2342, info: "Great BBQ!"},
+    {name: "JPrime", longitude: -98.5137, latitude: 29.6094, info: "Great Lamb Chops!"},
+    {name: "Silo", longitude: -98.4479, latitude: 29.4875, info: "Great Steaks!"},
+    {name: "NONNA", longitude: -98.4883, latitude: 29.4206, info: "Great Bolognese!"},
 ]
 restaurants.forEach(restaurant=>{
     const marker = new mapboxgl.Marker()

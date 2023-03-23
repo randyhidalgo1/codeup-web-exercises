@@ -18,7 +18,7 @@
     <div class="row">
       <div class="column justify-center align-center text-center">
         <h1>MapBox</h1>
-        <div id='map' style='width: 800px; height: 800px;'></div>
+        <div id='map' style='width: 500px; height: 500px;'></div>
         <div class="row">
           <form class="column justify-center align-center text-center gap-10">
             <label for="zoom"> Set Zoom</label>
@@ -31,7 +31,6 @@
           <input type="text" name="setMarker" id="setMarker">
           <button id="setMarkerButton">Set Marker</button>
           </form>
-
         </div>
       </div>
     </div>
@@ -47,10 +46,10 @@
     zoom: 9, // starting zoom
   });
   const codeUpMarker = new mapboxgl.Marker()
-          .setLngLat([-98.4881, 29.4177])
+          .setLngLat([-98.4683, 29.5312])
           .addTo(map);
   const codeupPopup = new mapboxgl.Popup()
-          .setHTML("<p>Battalion</p>")
+          .setHTML("<p>Center Of the Universe!</p>")
             codeUpMarker.setPopup(codeupPopup);
 </script>
 <script src="js/mapbox-maps.js"></script>
