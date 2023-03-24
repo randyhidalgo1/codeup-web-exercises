@@ -73,22 +73,21 @@
             lng: -98.48962
         }
     };
-    const codeUpMarker = new mapboxgl.Marker()
+    const marker = new mapboxgl.Marker()
         .setLngLat(e.lngLat)
         .addTo(map);
     map.on('click', function(e) {
-        codeUpMarker.setLngLat(e.lngLat);
+        marker.setLngLat(e.lngLat);
         console.log(e.lngLat);
         let lat = e.lngLat.lat;
         let lon = e.lngLat.lng;
 
-        // Make an API request to OpenWeatherMap
-        fetch('https://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + lon + '&appid=OPEN_WEATHER_APPID')
-        .then(response => response.json())
-        .then(data => {
-        // Display the weather information on the page
-        console.log(data);
-        });
+        fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${e.lngLat[1]}&lon=${e.lngLat[0]}&appid=${OPEN_WEATHER_APPID}`)
+            .then(response => response.json())
+            .then(data => {
+         console.log(data);
+
+            });
         });
 </script>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>

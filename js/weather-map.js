@@ -1,15 +1,16 @@
-
 $(document).ready(function() {
     let apiKey ='27e18d6e5218dbc17af1df1d2c62e1d5';
     let urlWeather = 'https://api.openweathermap.org/data/2.5/weather?q=San+Antonio,TX,USA&units=imperial&appid=' + apiKey;
     $.getJSON(urlWeather, function(data) {
         let city = data.name;
         let temp = Math.round(data.main.temp);
+        let wind = data.speed;
         let desc = data.weather[0].description;
         let icon = 'http://openweathermap.org/img/w/' + data.weather[0].icon + '.png';
 
         $('#weather').html('<p class="para row">Currently in ' + city + ': ' + temp + '&deg;F and ' + desc + '</p><img src="' + icon + '">');
     });
+
 });
 
 $(document).ready(function() {
@@ -49,16 +50,36 @@ function getDayOfWeek(day) {
     let daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     return daysOfWeek[day];
 }
-document.getElementById("setMarkerButton")
-    .addEventListener("click", event => {
-        event.preventDefault();
-        const address = document.getElementById
-        ("setMarker").value;
-        geocode(address, MAPBOX_API_TOKEN).then(coords => {
-            const newMarker = new mapboxgl.Marker()
-                .setLngLat(coords)
-                .addTo(map);
-            // map.setCenter(coords);
-            map.flyTo({center: coords, zoom: 15});
-        })
-    });
+$('#setMarkerButton').click(function(event) {
+    event.preventDefault();
+    const coords = marker.getLngLat();
+    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${coords.lat}&lon=${coords.lng}&appid=${OPEN_WEATHER_APPID}`)
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+            let city = data.name;
+            let temp = Math.round(data.main.temp);
+            let desc = data.weather[0].description;
+            let icon = 'http://openweathermap.org/img/w/' + data.weather[0].icon + '.png';
+            $('#weather').html('<p class="para row">Currently in ' + city + ': ' + temp + '&deg;F and ' + desc + '</p><img src="' + icon + '">');
+        });
+});
+
+
+
+
+
+// Test
+// document.getElementById("setMarkerButton")
+//     .addEventListener("click", event => {
+//         event.preventDefault();
+//         const address = document.getElementById
+//         ("setMarker").value;
+//         geocode(address, MAPBOX_API_TOKEN).then(e.lngLat); {
+//             const newMarker = new mapboxgl.Marker()
+//                 .setLngLat(e.lngLat)
+//                 .addTo(map);
+//             // map.setCenter(coords);
+//             map.flyTo({center: e.lngLat, zoom: 15});
+//         })
+//     });
