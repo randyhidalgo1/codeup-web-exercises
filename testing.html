@@ -2,20 +2,64 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Current Weather for San Antonio, TX</title>
+    <script src="js/keys.js"></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="css/resets.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/weather-map.css">
+    <style>
+        body {
+            background-image: url('images/sky.jpeg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+    </style>
 </head>
 <body>
-<div class="form-check form-check-inline">
-  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value=">
-  <label class="form-check-label" for="inlineCheckbox1">"Small 10"</label>
+<div class="page-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="column justify-center align-center">
+                <h1 class="title"></h1>
+                <div id="weather">
+                    <p>Loading weather...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="column justify-center align-center">
+                <h1 class="title"></h1>
+                <div id="weather1">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="column justify-center align-center text-center">
+                <h1></h1>
+                <div class="column"></div>
+                <form class="marker">
+                    <label for="setMarker">Enter Address</label>
+                    <input type="text" name="setMarker" id="setMarker">
+                    <button id="setAddressButton">For Weather</button>
+                </form>
+                <div id='map' style='width: 1000px; height: 500px;'></div>
+            </div>
+        </div>
+    </div>
 </div>
-<div class="form-check form-check-inline">
-  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value=>
-  <label class="form-check-label" for="inlineCheckbox2">"Medium 12"</label>
-</div>
-<div class="form-check form-check-inline">
-  <input class="form-check-input" type="radio" id="inlineCheckbox3" value=>
-  <label class="form-check-label" for="inlineCheckbox3">Hand Tossed</label>
-</div>
+
+
+<script src="js/mapbox-geocoder-utils.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="js/testing-weather-map.js"></script>
 </body>
 </html>

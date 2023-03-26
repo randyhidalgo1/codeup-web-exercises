@@ -45,7 +45,7 @@ label {
 
 /*Weather Button*/
 #setMarkerButton {
-    background-color: #1B346E;
+    background-color: red;
     border: 3px solid #ccc;
     padding: 15px;
     color: #ffffff;
