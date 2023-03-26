@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/weather-map.css">
     <style>
         body {
-            background-image: url('images/sky.jpeg');
+            background-image: url('images/weather-app-bckgrnd.jpg');
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-size: 100% 100%;
@@ -47,9 +47,9 @@
                 <h1></h1>
                 <div class="column"></div>
                 <form class="marker">
-                    <label for="setMarker">Enter Address</label>
+                    <label for="setMarker">Location</label>
                     <input type="text" name="setMarker" id="setMarker">
-                    <button id="setAddressButton">For Weather</button>
+                    <button id="setAddressButton">Find</button>
                 </form>
                 <div id='map' style='width: 1000px; height: 500px;'></div>
             </div>
@@ -60,6 +60,6 @@
 
 <script src="js/mapbox-geocoder-utils.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-<script src="js/testing-weather-map.js"></script>
+<script src="js/weather-map.js"></script>
 </body>
 </html>

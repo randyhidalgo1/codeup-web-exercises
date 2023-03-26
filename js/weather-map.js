@@ -154,7 +154,7 @@ $('#setAddressButton').click(function(event) {
                         <p>${data.weather[0].description}</p>
                         <p>Temperature: ${data.main.temp}&deg;F</p>
                         <p>Feels like: ${data.main.feels_like}&deg;F</p>
-                        <<p>Humidity: ${data.main.humidity}%</p>
+                        <p>Humidity: ${data.main.humidity}%</p>
                     </div>
                 `;
                 $('#weather').html(html);
@@ -177,7 +177,7 @@ $('#setAddressButton').click(function(event) {
                     let iconUrl = `http://openweathermap.org/img/w/${data.list[i].weather[0].icon}.png`;
 
                     html += `
-                        <div class="forecast">
+                        <div class="forecast1">
                             <h3>${dayOfWeek}</h3>
                             <img src="${iconUrl}">
                             <p>Temperature: ${temperature}&deg;F</p>

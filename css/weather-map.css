@@ -9,17 +9,36 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 20px;
-    max-width: 1920px;
-    font-size: 45px;
+    background-color: #1B346E;
+    border: 5px solid #ccc;
+    padding: 30px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    margin-inside: 1px;
+    text-align: center;
+    max-width: 100%;
+
 }
+ .para {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     font-size: 45px;
+     margin: 10px;
+     text-align: center;
+     max-width: 100%;
+     color: white;
+     font-weight: 800;
+ }
+
 /*5 Day Forecast*/
 #weather1 {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
     max-width: 100%;
-    font-size: 25px;
+    font-size: 15px;
+    border: 5px solid #ccc;
+    background-color: #1B346E;
 }
 /*Email Box*/
 .marker {
@@ -44,49 +63,34 @@ label {
 }
 
 /*Weather Button*/
-#setMarkerButton {
-    background-color: red;
+#setAddressButton {
+    background-color: #1B346E;
     border: 3px solid #ccc;
     padding: 15px;
-    color: #ffffff;
     max-width: 100%;
     margin-top: 20px;
     margin-bottom: 20px;
     margin-inside: 25px;
     font-size: 30px;
+    font-weight: bold;
+    color: whitesmoke;
 
 }
-/*.title {*/
-/*    font-size: 30px;*/
-/*    font-weight: bold;*/
-/*    color: darkslateblue;*/
-/*    margin: 10px;*/
-/*    text-align: center;*/
-/*    width: 100%;*/
-/*}*/
-
-.para {
-    display: flex;
-    justify-content: center;
-    font-size: 45px;
-    font-weight: 700;
-    margin: 10px;
-    text-align: center;
-    max-width: 100%;
-    color: black;
-}
+/*CURRENT WEATHER SECTION*!*/
 .forecast {
     background-color: #1B346E;
     border: 1px;
-    padding: 30px;
-    margin-top: 50px;
-    margin-inside: 1px;
+    padding: 5px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-right: 5px;
+    margin-left: 5px;
     text-align: center;
     max-width: 100%;
 }
 
 .forecast-container {
-    background-color: #000000;
+    background-color: #1B346E;
     border: 1px solid #ccc;
     padding: 15px;
     color: whitesmoke;
@@ -111,3 +115,27 @@ label {
 .humidity, .wind, .pressure {
     font-size: 14px;
 }
+
+/*CURRENT WEATHER SECTION*/
+.current-weather {
+    background-color: #1B346E;
+    border: 3px solid #ccc;
+    padding: 30px;
+    margin-top: 5px;
+    Margin-bottom: 15px;
+    margin-inside: 1px;
+    text-align: center;
+    max-width: 100%;
+}
+/*5 day forecast section for Address*/
+ .forecast1 {
+     background-color: #1B346E;
+     color: whitesmoke;
+     font-weight: 700;
+     border: 10px;
+     padding: 30px;
+     margin-top: 5px;
+     margin-inside: 1px;
+     text-align: center;
+     max-width: 100%;
+ }
