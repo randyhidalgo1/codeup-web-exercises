@@ -1,11 +1,22 @@
-// Write a function named discountCheck. The function should accept an object that represents a customer's transaction. The object passed into the function should have customerName, items, and clubMember properties. A customer will qualify for a discount if they have a total from the items property of 150 or greater, or if they are a club member. discountCheck should return a boolean representing whether the customer described by the object qualifies for a discount.
-//
+// Write a function named discountCheck. The function should accept an
+// object that represents a customer's transaction. The object passed into the function should have customerName, items, and clubMember properties. A customer will qualify for a discount if they have a total from the items property of 150 or greater, or if they are a club member. discountCheck should return a boolean representing whether the customer described by the object qualifies for a discount.
+
+function discountCheck(transaction) {
+    let total = 0;
+    transaction.items.forEach(function (item) {
+        total += item.price;
+    });
+    return total >= 150 || customer.clubMember;
+}
+
+
+
 //
 //
 //
 // W
 // Write a function named checkForNumber that accepts an argument and returns a string 'number' or "not a number" based on whether the input is a number.
-//
+//nt
 // checkForNumber(-1) // "number"
 // checkForNumber(0) // "number"
 // checkForNumber(6) // "number"

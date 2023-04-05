@@ -73,12 +73,12 @@ users.forEach(function(user) {
     // const languages = user.languages;
 
     // TODO: rewrite the assignment below to use template strings
-    developers.push(`${name} 's email is ' ${email} ${name} ' knows ' ${languages.join}(', '))
-    developers.push(`${name} 's email is ' ${email} ${name} ' knows ' ${languages.join}(', '))
+    developers.push(`${name} 's email is ' ${email} ${name} ' knows ' ${languages.join}(', ')`);
 });
 
+
     // TODO: Use `let` for the following variable
-    // let list = '<ul>';
+let list = '<ul>';
 
 let list = document.createElement (`<ul>`);
 
@@ -89,12 +89,12 @@ developers.forEach(function (developer) {
 
     // TODO: rewrite the assignment below to use template strings
 
-//     list += '<li>' + developer + '</li>';
-// });
+    list += '<li>' + developer + '</li>';
+});
 
 for (const developer of developers) {
     list.innerHTML += '<li>${developer}</li>';
 }
 
 
-// list += '</ul>';
+list += '</ul>';
